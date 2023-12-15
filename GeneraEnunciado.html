@@ -11,16 +11,16 @@
         $url = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
 
         $data = array(
-            'prompt' => $texto_para_generar,
-            'max_tokens' => 100, // La cantidad de tokens máxima para generar
-            'temperature' => 0.5, // El nivel de creatividad o aleatoriedad del texto generado
-            'top_p' => 1, // Limite superior de probabilidad para las opciones de token
-            'n' => 1 // Número de respuestas a generar
+            "prompt" , $texto_para_generar,
+            "max_tokens" , 100, // La cantidad de tokens máxima para generar
+            "temperature" , 0.5, // El nivel de creatividad o aleatoriedad del texto generado
+            "op_p" , 1, // Limite superior de probabilidad para las opciones de token
+            "n" , 1 // Número de respuestas a generar
         );
 
         $headers = array(
-            'Content-Type: application/json',
-            'Authorization: Bearer ' . $openai_api_key
+            "Content-Type: application/json",
+            "Authorization: Bearer " . $openai_api_key
         );
 
         $ch = curl_init($url);
